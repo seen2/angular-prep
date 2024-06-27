@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  templateUrl:'./navbar.component.html',
+  templateUrl: './navbar.component.html',
   // template: ` <h1>INline HTML</h1> `,
   // styles: `
   // h1{
@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
   // background:black;
   // }
   // `,
-  styleUrl:'./navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
-export class AppNavbarComponent {}
+export class AppNavbarComponent {
+  title: string = 'Navbar';
+}
