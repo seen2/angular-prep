@@ -1,1 +1,15 @@
-<p>view-todo works!</p>
+<h2 style="text-align: center;" >VIEW-TODO WORKS!</h2>
+<hr/>
+@for(todo of getTodos(); track todo){
+  <div class="todo" >
+    <div style="display: flex; flex-direction: column;" >
+      <h3>{{todo.title}}</h3>
+      <p>{{todo.description}}</p>
+    </div>
+    <div>
+      <button (click)="deleteTodo(todo.id)" >Delete</button>
+    </div>
+  </div>
+}@empty {
+  <div>No todos found...</div>
+}
